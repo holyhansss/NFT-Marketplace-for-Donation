@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NFTMarket from "./contracts/NFTMarket.json";
 import NFT from "./contracts/NFT.json";
 import getWeb3 from "./getWeb3";
+import ReadNFTs from "./component/ReadNFTs";
 
 import "./App.css";
 
@@ -10,7 +11,7 @@ import {
 } from './config'
 
 class App extends Component {
-  state = { web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 0, items: []};
+  state = { mode: 'view', web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 1, items: []};
   
   componentDidMount = async () => {
     try {
@@ -37,7 +38,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, NFTContractAddress: deployedNetwork2.address, NFTMarketContract, NFTContract});
+      this.setState({ web3, accounts, NFTMarketContract, NFTContract});
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -50,24 +51,29 @@ class App extends Component {
   handleFromOnSubmit = async (e) => {
     e.preventDefault();
     let items = this.state.items;
-    items.push({
-      id:this.state.totalId, 
-      assetName: e.target.assetName.value, 
-      assetDesc: e.target.assetDesc.value,
-      assetPrice: e.target.assetPrice.value
-    })
+
     let price = e.target.assetPrice.value;
-    price = parseFloat(price)
+    price = parseInt(price)
+    
+    let transaction = await this.state.NFTContract.methods.createToken('url').send({from: this.state.accounts[0]});
+    let id = await this.state.NFTContract.methods.createToken('url').call({from: this.state.accounts[0]})
+    let listingPrice = await this.state.NFTMarketContract.methods.getListingPrice().call({from: this.state.accounts[0]});
+    listingPrice = listingPrice+""
+    
+    let receipt = await this.state.NFTMarketContract.methods.createMarketItem(nftaddress, id-1, price).send( { from: this.state.accounts[0], value : listingPrice})
 
 
-    let listingPrice = await this.state.NFTMarketContract.methods.getListingPrice().call();
-    //listingPrice = this.state.web3.utils.fromWei(listingPrice, 'ether')
-    console.log(this.state.NFTContract.defaultAccount )
-    //console.log(this.state.NFTContractAddress);
-    await this.state.NFTMarketContract.methods.createMarketItem(nftaddress,this.state.totalId, price).send( { from: nftaddress})
     let totalId = this.state.totalId + 1;
     this.setState({items, totalId})
   }
+
+  handleView = async () => {
+    let items = await this.state.NFTMarketContract.methods.fetchMarketItems().call({from: this.state.accounts[0]});
+    //this.setState({items})
+    const mapp = items.map((item) => {
+      console.log(item.tokenId , item.seller)
+    })
+  } 
   
   render() {
     if (!this.state.web3) {
@@ -75,6 +81,7 @@ class App extends Component {
     }
 
     return (
+      
       <div className="App">
         <div className="container">
           <form onSubmit={this.handleFromOnSubmit}>
@@ -83,7 +90,8 @@ class App extends Component {
             <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH'></input></p>
             <p><input type='submit'></input></p>
           </form>
-        
+          <ReadNFTs NFTMarketContract={this.state.NFTMarketContract}></ReadNFTs>
+          <button type='button' onClick={this.handleView}>View NFTs</button>
         </div>
       </div>
     );

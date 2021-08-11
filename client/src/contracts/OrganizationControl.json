@@ -7480,18 +7480,18 @@
         1567
       ],
       "OrganizationControl": [
-        2685
+        2676
       ],
       "Ownable": [
         103
       ]
     },
-    "id": 2686,
+    "id": 2677,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2545,
+        "id": 2536,
         "literals": [
           "solidity",
           "^",
@@ -7504,10 +7504,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 2546,
+        "id": 2537,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2686,
+        "scope": 2677,
         "sourceUnit": 104,
         "src": "60:52:16",
         "symbolAliases": [],
@@ -7518,13 +7518,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2547,
+              "id": 2538,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 103,
               "src": "148:7:16"
             },
-            "id": 2548,
+            "id": 2539,
             "nodeType": "InheritanceSpecifier",
             "src": "148:7:16"
           }
@@ -7532,9 +7532,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 2685,
+        "id": 2676,
         "linearizedBaseContracts": [
-          2685,
+          2676,
           103,
           1567
         ],
@@ -7544,12 +7544,12 @@
         "nodes": [
           {
             "body": {
-              "id": 2551,
+              "id": 2542,
               "nodeType": "Block",
               "src": "181:10:16",
               "statements": []
             },
-            "id": 2552,
+            "id": 2543,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -7557,18 +7557,18 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2549,
+              "id": 2540,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "179:2:16"
             },
             "returnParameters": {
-              "id": 2550,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "168:23:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -7576,16 +7576,16 @@
           },
           {
             "canonicalName": "OrganizationControl.Organization",
-            "id": 2563,
+            "id": 2554,
             "members": [
               {
                 "constant": false,
-                "id": 2554,
+                "id": 2545,
                 "mutability": "mutable",
                 "name": "id",
                 "nameLocation": "235:2:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "227:10:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7594,7 +7594,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2553,
+                  "id": 2544,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "227:7:16",
@@ -7607,12 +7607,12 @@
               },
               {
                 "constant": false,
-                "id": 2556,
+                "id": 2547,
                 "mutability": "mutable",
                 "name": "orgAddress",
                 "nameLocation": "256:10:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "248:18:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7621,7 +7621,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 2555,
+                  "id": 2546,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "248:7:16",
@@ -7635,12 +7635,12 @@
               },
               {
                 "constant": false,
-                "id": 2558,
+                "id": 2549,
                 "mutability": "mutable",
                 "name": "name",
                 "nameLocation": "284:4:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "277:11:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7649,7 +7649,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2557,
+                  "id": 2548,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "277:6:16",
@@ -7662,12 +7662,12 @@
               },
               {
                 "constant": false,
-                "id": 2560,
+                "id": 2551,
                 "mutability": "mutable",
                 "name": "totalValue",
                 "nameLocation": "304:10:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "299:15:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7676,7 +7676,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2559,
+                  "id": 2550,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "299:4:16",
@@ -7689,12 +7689,12 @@
               },
               {
                 "constant": false,
-                "id": 2562,
+                "id": 2553,
                 "mutability": "mutable",
                 "name": "exist",
                 "nameLocation": "330:5:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "325:10:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -7703,7 +7703,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 2561,
+                  "id": 2552,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "325:4:16",
@@ -7718,29 +7718,29 @@
             "name": "Organization",
             "nameLocation": "204:12:16",
             "nodeType": "StructDefinition",
-            "scope": 2685,
+            "scope": 2676,
             "src": "197:146:16",
             "visibility": "public"
           },
           {
             "anonymous": false,
-            "id": 2571,
+            "id": 2562,
             "name": "newOrgCreated",
             "nameLocation": "357:13:16",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2570,
+              "id": 2561,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2565,
+                  "id": 2556,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "id",
                   "nameLocation": "379:2:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "371:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7749,7 +7749,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2564,
+                    "id": 2555,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "371:7:16",
@@ -7762,13 +7762,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2567,
+                  "id": 2558,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "391:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "383:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7777,7 +7777,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2566,
+                    "id": 2557,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:16",
@@ -7791,13 +7791,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2569,
+                  "id": 2560,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "411:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "404:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7806,7 +7806,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2568,
+                    "id": 2559,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "404:6:16",
@@ -7824,23 +7824,23 @@
           },
           {
             "anonymous": false,
-            "id": 2579,
+            "id": 2570,
             "name": "orgDeleted",
             "nameLocation": "433:10:16",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2578,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2573,
+                  "id": 2564,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "id",
                   "nameLocation": "452:2:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "444:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7849,7 +7849,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2572,
+                    "id": 2563,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "444:7:16",
@@ -7862,13 +7862,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2575,
+                  "id": 2566,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "464:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "456:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7877,7 +7877,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2574,
+                    "id": 2565,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "456:7:16",
@@ -7891,13 +7891,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2577,
+                  "id": 2568,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "484:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "477:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7906,7 +7906,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2576,
+                    "id": 2567,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "477:6:16",
@@ -7925,23 +7925,23 @@
           {
             "constant": false,
             "functionSelector": "5b29443e",
-            "id": 2584,
+            "id": 2575,
             "mutability": "mutable",
             "name": "orgainzations",
             "nameLocation": "542:13:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "502:53:16",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
               "typeString": "mapping(uint256 => struct OrganizationControl.Organization)"
             },
             "typeName": {
-              "id": 2583,
+              "id": 2574,
               "keyType": {
-                "id": 2580,
+                "id": 2571,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "510:7:16",
@@ -7953,23 +7953,23 @@
               "nodeType": "Mapping",
               "src": "502:32:16",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                 "typeString": "mapping(uint256 => struct OrganizationControl.Organization)"
               },
               "valueType": {
-                "id": 2582,
+                "id": 2573,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 2581,
+                  "id": 2572,
                   "name": "Organization",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2563,
+                  "referencedDeclaration": 2554,
                   "src": "521:12:16"
                 },
-                "referencedDeclaration": 2563,
+                "referencedDeclaration": 2554,
                 "src": "521:12:16",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Organization_$2563_storage_ptr",
+                  "typeIdentifier": "t_struct$_Organization_$2554_storage_ptr",
                   "typeString": "struct OrganizationControl.Organization"
                 }
               }
@@ -7979,12 +7979,12 @@
           {
             "constant": false,
             "functionSelector": "7372a400",
-            "id": 2586,
+            "id": 2577,
             "mutability": "mutable",
             "name": "orgNumCount",
             "nameLocation": "581:11:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "568:24:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -7993,7 +7993,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 2585,
+              "id": 2576,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "568:5:16",
@@ -8007,12 +8007,12 @@
           {
             "constant": false,
             "functionSelector": "714cff56",
-            "id": 2588,
+            "id": 2579,
             "mutability": "mutable",
             "name": "tokenIds",
             "nameLocation": "614:8:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "599:23:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -8021,7 +8021,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2587,
+              "id": 2578,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "599:7:16",
@@ -8034,7 +8034,7 @@
           },
           {
             "body": {
-              "id": 2600,
+              "id": 2591,
               "nodeType": "Block",
               "src": "686:69:16",
               "statements": [
@@ -8044,24 +8044,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2593,
+                            "id": 2584,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "705:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2595,
+                          "id": 2586,
                           "indexExpression": {
-                            "id": 2594,
+                            "id": 2585,
                             "name": "tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2588,
+                            "referencedDeclaration": 2579,
                             "src": "719:8:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -8075,18 +8075,18 @@
                           "nodeType": "IndexAccess",
                           "src": "705:23:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2596,
+                        "id": 2587,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "exist",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2562,
+                        "referencedDeclaration": 2553,
                         "src": "705:29:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -8101,7 +8101,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 2592,
+                      "id": 2583,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -8115,7 +8115,7 @@
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 2597,
+                    "id": 2588,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8130,33 +8130,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2598,
+                  "id": 2589,
                   "nodeType": "ExpressionStatement",
                   "src": "697:38:16"
                 },
                 {
-                  "id": 2599,
+                  "id": 2590,
                   "nodeType": "PlaceholderStatement",
                   "src": "746:1:16"
                 }
               ]
             },
-            "id": 2601,
+            "id": 2592,
             "name": "onlyToOrganization",
             "nameLocation": "644:18:16",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2591,
+              "id": 2582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2590,
+                  "id": 2581,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "677:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2601,
+                  "scope": 2592,
                   "src": "663:22:16",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8165,7 +8165,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2589,
+                    "id": 2580,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "663:6:16",
@@ -8185,37 +8185,37 @@
           },
           {
             "body": {
-              "id": 2634,
+              "id": 2625,
               "nodeType": "Block",
               "src": "853:222:16",
               "statements": [
                 {
                   "expression": {
-                    "id": 2620,
+                    "id": 2611,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 2610,
+                        "id": 2601,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "864:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2612,
+                      "id": 2603,
                       "indexExpression": {
-                        "id": 2611,
+                        "id": 2602,
                         "name": "tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2588,
+                        "referencedDeclaration": 2579,
                         "src": "878:8:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -8229,7 +8229,7 @@
                       "nodeType": "IndexAccess",
                       "src": "864:23:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
@@ -8238,11 +8238,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 2614,
+                          "id": 2605,
                           "name": "orgNumCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2586,
+                          "referencedDeclaration": 2577,
                           "src": "903:11:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint8",
@@ -8250,11 +8250,11 @@
                           }
                         },
                         {
-                          "id": 2615,
+                          "id": 2606,
                           "name": "_orgAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2603,
+                          "referencedDeclaration": 2594,
                           "src": "916:11:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -8262,11 +8262,11 @@
                           }
                         },
                         {
-                          "id": 2616,
+                          "id": 2607,
                           "name": "_orgName",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2605,
+                          "referencedDeclaration": 2596,
                           "src": "929:8:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -8275,7 +8275,7 @@
                         },
                         {
                           "hexValue": "30",
-                          "id": 2617,
+                          "id": 2608,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -8291,7 +8291,7 @@
                         },
                         {
                           "hexValue": "74727565",
-                          "id": 2618,
+                          "id": 2609,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -8329,18 +8329,18 @@
                             "typeString": "bool"
                           }
                         ],
-                        "id": 2613,
+                        "id": 2604,
                         "name": "Organization",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2563,
+                        "referencedDeclaration": 2554,
                         "src": "890:12:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Organization_$2563_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Organization_$2554_storage_ptr_$",
                           "typeString": "type(struct OrganizationControl.Organization storage pointer)"
                         }
                       },
-                      "id": 2619,
+                      "id": 2610,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8351,17 +8351,17 @@
                       "src": "890:57:16",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_memory_ptr",
+                        "typeIdentifier": "t_struct$_Organization_$2554_memory_ptr",
                         "typeString": "struct OrganizationControl.Organization memory"
                       }
                     },
                     "src": "864:83:16",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                      "typeIdentifier": "t_struct$_Organization_$2554_storage",
                       "typeString": "struct OrganizationControl.Organization storage ref"
                     }
                   },
-                  "id": 2621,
+                  "id": 2612,
                   "nodeType": "ExpressionStatement",
                   "src": "864:83:16"
                 },
@@ -8369,11 +8369,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 2623,
+                        "id": 2614,
                         "name": "orgNumCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2586,
+                        "referencedDeclaration": 2577,
                         "src": "977:11:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -8381,11 +8381,11 @@
                         }
                       },
                       {
-                        "id": 2624,
+                        "id": 2615,
                         "name": "_orgAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2603,
+                        "referencedDeclaration": 2594,
                         "src": "990:11:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8393,11 +8393,11 @@
                         }
                       },
                       {
-                        "id": 2625,
+                        "id": 2616,
                         "name": "_orgName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2605,
+                        "referencedDeclaration": 2596,
                         "src": "1003:8:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -8420,18 +8420,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 2622,
+                      "id": 2613,
                       "name": "newOrgCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2571,
+                      "referencedDeclaration": 2562,
                       "src": "963:13:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 2626,
+                    "id": 2617,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8446,13 +8446,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2627,
+                  "id": 2618,
                   "nodeType": "EmitStatement",
                   "src": "958:54:16"
                 },
                 {
                   "expression": {
-                    "id": 2629,
+                    "id": 2620,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8462,11 +8462,11 @@
                     "prefix": false,
                     "src": "1023:13:16",
                     "subExpression": {
-                      "id": 2628,
+                      "id": 2619,
                       "name": "orgNumCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2586,
+                      "referencedDeclaration": 2577,
                       "src": "1023:11:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -8478,13 +8478,13 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 2630,
+                  "id": 2621,
                   "nodeType": "ExpressionStatement",
                   "src": "1023:13:16"
                 },
                 {
                   "expression": {
-                    "id": 2632,
+                    "id": 2623,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8494,11 +8494,11 @@
                     "prefix": false,
                     "src": "1047:10:16",
                     "subExpression": {
-                      "id": 2631,
+                      "id": 2622,
                       "name": "tokenIds",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2588,
+                      "referencedDeclaration": 2579,
                       "src": "1047:8:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -8510,22 +8510,22 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2633,
+                  "id": 2624,
                   "nodeType": "ExpressionStatement",
                   "src": "1047:10:16"
                 }
               ]
             },
             "functionSelector": "6867478a",
-            "id": 2635,
+            "id": 2626,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2608,
+                "id": 2599,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2607,
+                  "id": 2598,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 46,
@@ -8539,17 +8539,17 @@
             "nameLocation": "776:15:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2606,
+              "id": 2597,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2603,
+                  "id": 2594,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "800:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2635,
+                  "scope": 2626,
                   "src": "792:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -8558,7 +8558,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2602,
+                    "id": 2593,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "792:7:16",
@@ -8572,12 +8572,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2605,
+                  "id": 2596,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "827:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2635,
+                  "scope": 2626,
                   "src": "813:22:16",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8586,7 +8586,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2604,
+                    "id": 2595,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "813:6:16",
@@ -8601,12 +8601,12 @@
               "src": "791:45:16"
             },
             "returnParameters": {
-              "id": 2609,
+              "id": 2600,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "853:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "767:308:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -8614,7 +8614,7 @@
           },
           {
             "body": {
-              "id": 2670,
+              "id": 2661,
               "nodeType": "Block",
               "src": "1150:265:16",
               "statements": [
@@ -8624,24 +8624,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2643,
+                            "id": 2634,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1169:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2645,
+                          "id": 2636,
                           "indexExpression": {
-                            "id": 2644,
+                            "id": 2635,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1183:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -8655,18 +8655,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1169:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2646,
+                        "id": 2637,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "exist",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2562,
+                        "referencedDeclaration": 2553,
                         "src": "1169:30:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -8675,7 +8675,7 @@
                       },
                       {
                         "hexValue": "54686973206f7267697a6174696f6e20646f6573206e6f74206578697374",
-                        "id": 2647,
+                        "id": 2638,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -8701,7 +8701,7 @@
                           "typeString": "literal_string \"This orgization does not exist\""
                         }
                       ],
-                      "id": 2642,
+                      "id": 2633,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -8715,7 +8715,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2648,
+                    "id": 2639,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8730,7 +8730,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2649,
+                  "id": 2640,
                   "nodeType": "ExpressionStatement",
                   "src": "1161:72:16"
                 },
@@ -8738,11 +8738,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 2651,
+                        "id": 2642,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2637,
+                        "referencedDeclaration": 2628,
                         "src": "1263:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -8752,24 +8752,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2652,
+                            "id": 2643,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1274:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2654,
+                          "id": 2645,
                           "indexExpression": {
-                            "id": 2653,
+                            "id": 2644,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1288:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -8783,18 +8783,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1274:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2655,
+                        "id": 2646,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "orgAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2556,
+                        "referencedDeclaration": 2547,
                         "src": "1274:35:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8804,24 +8804,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2656,
+                            "id": 2647,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1311:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2658,
+                          "id": 2649,
                           "indexExpression": {
-                            "id": 2657,
+                            "id": 2648,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1325:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -8835,18 +8835,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1311:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2659,
+                        "id": 2650,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "name",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2558,
+                        "referencedDeclaration": 2549,
                         "src": "1311:29:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -8869,18 +8869,18 @@
                           "typeString": "string storage ref"
                         }
                       ],
-                      "id": 2650,
+                      "id": 2641,
                       "name": "newOrgCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2571,
+                      "referencedDeclaration": 2562,
                       "src": "1249:13:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 2660,
+                    "id": 2651,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8895,13 +8895,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2661,
+                  "id": 2652,
                   "nodeType": "EmitStatement",
                   "src": "1244:97:16"
                 },
                 {
                   "expression": {
-                    "id": 2665,
+                    "id": 2656,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8912,24 +8912,24 @@
                     "src": "1352:31:16",
                     "subExpression": {
                       "baseExpression": {
-                        "id": 2662,
+                        "id": 2653,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "1359:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2664,
+                      "id": 2655,
                       "indexExpression": {
-                        "id": 2663,
+                        "id": 2654,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2637,
+                        "referencedDeclaration": 2628,
                         "src": "1373:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -8943,7 +8943,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1359:24:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
@@ -8952,13 +8952,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2666,
+                  "id": 2657,
                   "nodeType": "ExpressionStatement",
                   "src": "1352:31:16"
                 },
                 {
                   "expression": {
-                    "id": 2668,
+                    "id": 2659,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8968,11 +8968,11 @@
                     "prefix": false,
                     "src": "1394:13:16",
                     "subExpression": {
-                      "id": 2667,
+                      "id": 2658,
                       "name": "orgNumCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2586,
+                      "referencedDeclaration": 2577,
                       "src": "1394:11:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -8984,22 +8984,22 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 2669,
+                  "id": 2660,
                   "nodeType": "ExpressionStatement",
                   "src": "1394:13:16"
                 }
               ]
             },
             "functionSelector": "b6cbb28f",
-            "id": 2671,
+            "id": 2662,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2640,
+                "id": 2631,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2639,
+                  "id": 2630,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 46,
@@ -9013,17 +9013,17 @@
             "nameLocation": "1096:18:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2638,
+              "id": 2629,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2637,
+                  "id": 2628,
                   "mutability": "mutable",
                   "name": "_tokenIds",
                   "nameLocation": "1123:9:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2671,
+                  "scope": 2662,
                   "src": "1115:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9032,7 +9032,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2636,
+                    "id": 2627,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1115:7:16",
@@ -9047,12 +9047,12 @@
               "src": "1114:19:16"
             },
             "returnParameters": {
-              "id": 2641,
+              "id": 2632,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1150:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "1087:328:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -9060,7 +9060,7 @@
           },
           {
             "body": {
-              "id": 2683,
+              "id": 2674,
               "nodeType": "Block",
               "src": "1495:61:16",
               "statements": [
@@ -9068,24 +9068,24 @@
                   "expression": {
                     "expression": {
                       "baseExpression": {
-                        "id": 2678,
+                        "id": 2669,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "1513:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2680,
+                      "id": 2671,
                       "indexExpression": {
-                        "id": 2679,
+                        "id": 2670,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2673,
+                        "referencedDeclaration": 2664,
                         "src": "1527:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -9099,33 +9099,33 @@
                       "nodeType": "IndexAccess",
                       "src": "1513:24:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
-                    "id": 2681,
+                    "id": 2672,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "orgAddress",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 2556,
+                    "referencedDeclaration": 2547,
                     "src": "1513:35:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 2677,
-                  "id": 2682,
+                  "functionReturnParameters": 2668,
+                  "id": 2673,
                   "nodeType": "Return",
                   "src": "1506:42:16"
                 }
               ]
             },
             "functionSelector": "5296598c",
-            "id": 2684,
+            "id": 2675,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -9133,17 +9133,17 @@
             "nameLocation": "1430:17:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2674,
+              "id": 2665,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2673,
+                  "id": 2664,
                   "mutability": "mutable",
                   "name": "_tokenIds",
                   "nameLocation": "1456:9:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2684,
+                  "scope": 2675,
                   "src": "1448:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9152,7 +9152,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2672,
+                    "id": 2663,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1448:7:16",
@@ -9167,17 +9167,17 @@
               "src": "1447:19:16"
             },
             "returnParameters": {
-              "id": 2677,
+              "id": 2668,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2676,
+                  "id": 2667,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2684,
+                  "scope": 2675,
                   "src": "1487:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9186,7 +9186,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2675,
+                    "id": 2666,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1487:7:16",
@@ -9201,14 +9201,14 @@
               ],
               "src": "1486:9:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "1421:135:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 2686,
+        "scope": 2677,
         "src": "116:1447:16",
         "usedErrors": []
       }
@@ -9222,18 +9222,18 @@
         1567
       ],
       "OrganizationControl": [
-        2685
+        2676
       ],
       "Ownable": [
         103
       ]
     },
-    "id": 2686,
+    "id": 2677,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2545,
+        "id": 2536,
         "literals": [
           "solidity",
           "^",
@@ -9246,10 +9246,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 2546,
+        "id": 2537,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2686,
+        "scope": 2677,
         "sourceUnit": 104,
         "src": "60:52:16",
         "symbolAliases": [],
@@ -9260,13 +9260,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2547,
+              "id": 2538,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 103,
               "src": "148:7:16"
             },
-            "id": 2548,
+            "id": 2539,
             "nodeType": "InheritanceSpecifier",
             "src": "148:7:16"
           }
@@ -9274,9 +9274,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 2685,
+        "id": 2676,
         "linearizedBaseContracts": [
-          2685,
+          2676,
           103,
           1567
         ],
@@ -9286,12 +9286,12 @@
         "nodes": [
           {
             "body": {
-              "id": 2551,
+              "id": 2542,
               "nodeType": "Block",
               "src": "181:10:16",
               "statements": []
             },
-            "id": 2552,
+            "id": 2543,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -9299,18 +9299,18 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2549,
+              "id": 2540,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "179:2:16"
             },
             "returnParameters": {
-              "id": 2550,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "168:23:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -9318,16 +9318,16 @@
           },
           {
             "canonicalName": "OrganizationControl.Organization",
-            "id": 2563,
+            "id": 2554,
             "members": [
               {
                 "constant": false,
-                "id": 2554,
+                "id": 2545,
                 "mutability": "mutable",
                 "name": "id",
                 "nameLocation": "235:2:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "227:10:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9336,7 +9336,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2553,
+                  "id": 2544,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "227:7:16",
@@ -9349,12 +9349,12 @@
               },
               {
                 "constant": false,
-                "id": 2556,
+                "id": 2547,
                 "mutability": "mutable",
                 "name": "orgAddress",
                 "nameLocation": "256:10:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "248:18:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9363,7 +9363,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 2555,
+                  "id": 2546,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "248:7:16",
@@ -9377,12 +9377,12 @@
               },
               {
                 "constant": false,
-                "id": 2558,
+                "id": 2549,
                 "mutability": "mutable",
                 "name": "name",
                 "nameLocation": "284:4:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "277:11:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9391,7 +9391,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2557,
+                  "id": 2548,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "277:6:16",
@@ -9404,12 +9404,12 @@
               },
               {
                 "constant": false,
-                "id": 2560,
+                "id": 2551,
                 "mutability": "mutable",
                 "name": "totalValue",
                 "nameLocation": "304:10:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "299:15:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9418,7 +9418,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2559,
+                  "id": 2550,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "299:4:16",
@@ -9431,12 +9431,12 @@
               },
               {
                 "constant": false,
-                "id": 2562,
+                "id": 2553,
                 "mutability": "mutable",
                 "name": "exist",
                 "nameLocation": "330:5:16",
                 "nodeType": "VariableDeclaration",
-                "scope": 2563,
+                "scope": 2554,
                 "src": "325:10:16",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -9445,7 +9445,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 2561,
+                  "id": 2552,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "325:4:16",
@@ -9460,29 +9460,29 @@
             "name": "Organization",
             "nameLocation": "204:12:16",
             "nodeType": "StructDefinition",
-            "scope": 2685,
+            "scope": 2676,
             "src": "197:146:16",
             "visibility": "public"
           },
           {
             "anonymous": false,
-            "id": 2571,
+            "id": 2562,
             "name": "newOrgCreated",
             "nameLocation": "357:13:16",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2570,
+              "id": 2561,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2565,
+                  "id": 2556,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "id",
                   "nameLocation": "379:2:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "371:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9491,7 +9491,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2564,
+                    "id": 2555,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "371:7:16",
@@ -9504,13 +9504,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2567,
+                  "id": 2558,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "391:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "383:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9519,7 +9519,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2566,
+                    "id": 2557,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:16",
@@ -9533,13 +9533,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2569,
+                  "id": 2560,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "411:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2571,
+                  "scope": 2562,
                   "src": "404:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9548,7 +9548,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2568,
+                    "id": 2559,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "404:6:16",
@@ -9566,23 +9566,23 @@
           },
           {
             "anonymous": false,
-            "id": 2579,
+            "id": 2570,
             "name": "orgDeleted",
             "nameLocation": "433:10:16",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2578,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2573,
+                  "id": 2564,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "id",
                   "nameLocation": "452:2:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "444:10:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9591,7 +9591,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2572,
+                    "id": 2563,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "444:7:16",
@@ -9604,13 +9604,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2575,
+                  "id": 2566,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "464:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "456:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9619,7 +9619,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2574,
+                    "id": 2565,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "456:7:16",
@@ -9633,13 +9633,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 2577,
+                  "id": 2568,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "484:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2579,
+                  "scope": 2570,
                   "src": "477:15:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -9648,7 +9648,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2576,
+                    "id": 2567,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "477:6:16",
@@ -9667,23 +9667,23 @@
           {
             "constant": false,
             "functionSelector": "5b29443e",
-            "id": 2584,
+            "id": 2575,
             "mutability": "mutable",
             "name": "orgainzations",
             "nameLocation": "542:13:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "502:53:16",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
               "typeString": "mapping(uint256 => struct OrganizationControl.Organization)"
             },
             "typeName": {
-              "id": 2583,
+              "id": 2574,
               "keyType": {
-                "id": 2580,
+                "id": 2571,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "510:7:16",
@@ -9695,23 +9695,23 @@
               "nodeType": "Mapping",
               "src": "502:32:16",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                 "typeString": "mapping(uint256 => struct OrganizationControl.Organization)"
               },
               "valueType": {
-                "id": 2582,
+                "id": 2573,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 2581,
+                  "id": 2572,
                   "name": "Organization",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2563,
+                  "referencedDeclaration": 2554,
                   "src": "521:12:16"
                 },
-                "referencedDeclaration": 2563,
+                "referencedDeclaration": 2554,
                 "src": "521:12:16",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Organization_$2563_storage_ptr",
+                  "typeIdentifier": "t_struct$_Organization_$2554_storage_ptr",
                   "typeString": "struct OrganizationControl.Organization"
                 }
               }
@@ -9721,12 +9721,12 @@
           {
             "constant": false,
             "functionSelector": "7372a400",
-            "id": 2586,
+            "id": 2577,
             "mutability": "mutable",
             "name": "orgNumCount",
             "nameLocation": "581:11:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "568:24:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9735,7 +9735,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 2585,
+              "id": 2576,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "568:5:16",
@@ -9749,12 +9749,12 @@
           {
             "constant": false,
             "functionSelector": "714cff56",
-            "id": 2588,
+            "id": 2579,
             "mutability": "mutable",
             "name": "tokenIds",
             "nameLocation": "614:8:16",
             "nodeType": "VariableDeclaration",
-            "scope": 2685,
+            "scope": 2676,
             "src": "599:23:16",
             "stateVariable": true,
             "storageLocation": "default",
@@ -9763,7 +9763,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2587,
+              "id": 2578,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "599:7:16",
@@ -9776,7 +9776,7 @@
           },
           {
             "body": {
-              "id": 2600,
+              "id": 2591,
               "nodeType": "Block",
               "src": "686:69:16",
               "statements": [
@@ -9786,24 +9786,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2593,
+                            "id": 2584,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "705:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2595,
+                          "id": 2586,
                           "indexExpression": {
-                            "id": 2594,
+                            "id": 2585,
                             "name": "tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2588,
+                            "referencedDeclaration": 2579,
                             "src": "719:8:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -9817,18 +9817,18 @@
                           "nodeType": "IndexAccess",
                           "src": "705:23:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2596,
+                        "id": 2587,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "exist",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2562,
+                        "referencedDeclaration": 2553,
                         "src": "705:29:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -9843,7 +9843,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 2592,
+                      "id": 2583,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -9857,7 +9857,7 @@
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 2597,
+                    "id": 2588,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9872,33 +9872,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2598,
+                  "id": 2589,
                   "nodeType": "ExpressionStatement",
                   "src": "697:38:16"
                 },
                 {
-                  "id": 2599,
+                  "id": 2590,
                   "nodeType": "PlaceholderStatement",
                   "src": "746:1:16"
                 }
               ]
             },
-            "id": 2601,
+            "id": 2592,
             "name": "onlyToOrganization",
             "nameLocation": "644:18:16",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2591,
+              "id": 2582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2590,
+                  "id": 2581,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "677:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2601,
+                  "scope": 2592,
                   "src": "663:22:16",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9907,7 +9907,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2589,
+                    "id": 2580,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "663:6:16",
@@ -9927,37 +9927,37 @@
           },
           {
             "body": {
-              "id": 2634,
+              "id": 2625,
               "nodeType": "Block",
               "src": "853:222:16",
               "statements": [
                 {
                   "expression": {
-                    "id": 2620,
+                    "id": 2611,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 2610,
+                        "id": 2601,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "864:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2612,
+                      "id": 2603,
                       "indexExpression": {
-                        "id": 2611,
+                        "id": 2602,
                         "name": "tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2588,
+                        "referencedDeclaration": 2579,
                         "src": "878:8:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -9971,7 +9971,7 @@
                       "nodeType": "IndexAccess",
                       "src": "864:23:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
@@ -9980,11 +9980,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 2614,
+                          "id": 2605,
                           "name": "orgNumCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2586,
+                          "referencedDeclaration": 2577,
                           "src": "903:11:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint8",
@@ -9992,11 +9992,11 @@
                           }
                         },
                         {
-                          "id": 2615,
+                          "id": 2606,
                           "name": "_orgAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2603,
+                          "referencedDeclaration": 2594,
                           "src": "916:11:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -10004,11 +10004,11 @@
                           }
                         },
                         {
-                          "id": 2616,
+                          "id": 2607,
                           "name": "_orgName",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2605,
+                          "referencedDeclaration": 2596,
                           "src": "929:8:16",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -10017,7 +10017,7 @@
                         },
                         {
                           "hexValue": "30",
-                          "id": 2617,
+                          "id": 2608,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -10033,7 +10033,7 @@
                         },
                         {
                           "hexValue": "74727565",
-                          "id": 2618,
+                          "id": 2609,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -10071,18 +10071,18 @@
                             "typeString": "bool"
                           }
                         ],
-                        "id": 2613,
+                        "id": 2604,
                         "name": "Organization",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2563,
+                        "referencedDeclaration": 2554,
                         "src": "890:12:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Organization_$2563_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Organization_$2554_storage_ptr_$",
                           "typeString": "type(struct OrganizationControl.Organization storage pointer)"
                         }
                       },
-                      "id": 2619,
+                      "id": 2610,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -10093,17 +10093,17 @@
                       "src": "890:57:16",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_memory_ptr",
+                        "typeIdentifier": "t_struct$_Organization_$2554_memory_ptr",
                         "typeString": "struct OrganizationControl.Organization memory"
                       }
                     },
                     "src": "864:83:16",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                      "typeIdentifier": "t_struct$_Organization_$2554_storage",
                       "typeString": "struct OrganizationControl.Organization storage ref"
                     }
                   },
-                  "id": 2621,
+                  "id": 2612,
                   "nodeType": "ExpressionStatement",
                   "src": "864:83:16"
                 },
@@ -10111,11 +10111,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 2623,
+                        "id": 2614,
                         "name": "orgNumCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2586,
+                        "referencedDeclaration": 2577,
                         "src": "977:11:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -10123,11 +10123,11 @@
                         }
                       },
                       {
-                        "id": 2624,
+                        "id": 2615,
                         "name": "_orgAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2603,
+                        "referencedDeclaration": 2594,
                         "src": "990:11:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10135,11 +10135,11 @@
                         }
                       },
                       {
-                        "id": 2625,
+                        "id": 2616,
                         "name": "_orgName",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2605,
+                        "referencedDeclaration": 2596,
                         "src": "1003:8:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -10162,18 +10162,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 2622,
+                      "id": 2613,
                       "name": "newOrgCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2571,
+                      "referencedDeclaration": 2562,
                       "src": "963:13:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 2626,
+                    "id": 2617,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10188,13 +10188,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2627,
+                  "id": 2618,
                   "nodeType": "EmitStatement",
                   "src": "958:54:16"
                 },
                 {
                   "expression": {
-                    "id": 2629,
+                    "id": 2620,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10204,11 +10204,11 @@
                     "prefix": false,
                     "src": "1023:13:16",
                     "subExpression": {
-                      "id": 2628,
+                      "id": 2619,
                       "name": "orgNumCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2586,
+                      "referencedDeclaration": 2577,
                       "src": "1023:11:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -10220,13 +10220,13 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 2630,
+                  "id": 2621,
                   "nodeType": "ExpressionStatement",
                   "src": "1023:13:16"
                 },
                 {
                   "expression": {
-                    "id": 2632,
+                    "id": 2623,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10236,11 +10236,11 @@
                     "prefix": false,
                     "src": "1047:10:16",
                     "subExpression": {
-                      "id": 2631,
+                      "id": 2622,
                       "name": "tokenIds",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2588,
+                      "referencedDeclaration": 2579,
                       "src": "1047:8:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -10252,22 +10252,22 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2633,
+                  "id": 2624,
                   "nodeType": "ExpressionStatement",
                   "src": "1047:10:16"
                 }
               ]
             },
             "functionSelector": "6867478a",
-            "id": 2635,
+            "id": 2626,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2608,
+                "id": 2599,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2607,
+                  "id": 2598,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 46,
@@ -10281,17 +10281,17 @@
             "nameLocation": "776:15:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2606,
+              "id": 2597,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2603,
+                  "id": 2594,
                   "mutability": "mutable",
                   "name": "_orgAddress",
                   "nameLocation": "800:11:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2635,
+                  "scope": 2626,
                   "src": "792:19:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10300,7 +10300,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2602,
+                    "id": 2593,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "792:7:16",
@@ -10314,12 +10314,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2605,
+                  "id": 2596,
                   "mutability": "mutable",
                   "name": "_orgName",
                   "nameLocation": "827:8:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2635,
+                  "scope": 2626,
                   "src": "813:22:16",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -10328,7 +10328,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 2604,
+                    "id": 2595,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "813:6:16",
@@ -10343,12 +10343,12 @@
               "src": "791:45:16"
             },
             "returnParameters": {
-              "id": 2609,
+              "id": 2600,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "853:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "767:308:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -10356,7 +10356,7 @@
           },
           {
             "body": {
-              "id": 2670,
+              "id": 2661,
               "nodeType": "Block",
               "src": "1150:265:16",
               "statements": [
@@ -10366,24 +10366,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2643,
+                            "id": 2634,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1169:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2645,
+                          "id": 2636,
                           "indexExpression": {
-                            "id": 2644,
+                            "id": 2635,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1183:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -10397,18 +10397,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1169:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2646,
+                        "id": 2637,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "exist",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2562,
+                        "referencedDeclaration": 2553,
                         "src": "1169:30:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -10417,7 +10417,7 @@
                       },
                       {
                         "hexValue": "54686973206f7267697a6174696f6e20646f6573206e6f74206578697374",
-                        "id": 2647,
+                        "id": 2638,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -10443,7 +10443,7 @@
                           "typeString": "literal_string \"This orgization does not exist\""
                         }
                       ],
-                      "id": 2642,
+                      "id": 2633,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -10457,7 +10457,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2648,
+                    "id": 2639,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10472,7 +10472,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2649,
+                  "id": 2640,
                   "nodeType": "ExpressionStatement",
                   "src": "1161:72:16"
                 },
@@ -10480,11 +10480,11 @@
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 2651,
+                        "id": 2642,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2637,
+                        "referencedDeclaration": 2628,
                         "src": "1263:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -10494,24 +10494,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2652,
+                            "id": 2643,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1274:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2654,
+                          "id": 2645,
                           "indexExpression": {
-                            "id": 2653,
+                            "id": 2644,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1288:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -10525,18 +10525,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1274:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2655,
+                        "id": 2646,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "orgAddress",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2556,
+                        "referencedDeclaration": 2547,
                         "src": "1274:35:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10546,24 +10546,24 @@
                       {
                         "expression": {
                           "baseExpression": {
-                            "id": 2656,
+                            "id": 2647,
                             "name": "orgainzations",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2584,
+                            "referencedDeclaration": 2575,
                             "src": "1311:13:16",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                               "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                             }
                           },
-                          "id": 2658,
+                          "id": 2649,
                           "indexExpression": {
-                            "id": 2657,
+                            "id": 2648,
                             "name": "_tokenIds",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2637,
+                            "referencedDeclaration": 2628,
                             "src": "1325:9:16",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -10577,18 +10577,18 @@
                           "nodeType": "IndexAccess",
                           "src": "1311:24:16",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                            "typeIdentifier": "t_struct$_Organization_$2554_storage",
                             "typeString": "struct OrganizationControl.Organization storage ref"
                           }
                         },
-                        "id": 2659,
+                        "id": 2650,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "name",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2558,
+                        "referencedDeclaration": 2549,
                         "src": "1311:29:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage",
@@ -10611,18 +10611,18 @@
                           "typeString": "string storage ref"
                         }
                       ],
-                      "id": 2650,
+                      "id": 2641,
                       "name": "newOrgCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2571,
+                      "referencedDeclaration": 2562,
                       "src": "1249:13:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 2660,
+                    "id": 2651,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10637,13 +10637,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2661,
+                  "id": 2652,
                   "nodeType": "EmitStatement",
                   "src": "1244:97:16"
                 },
                 {
                   "expression": {
-                    "id": 2665,
+                    "id": 2656,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10654,24 +10654,24 @@
                     "src": "1352:31:16",
                     "subExpression": {
                       "baseExpression": {
-                        "id": 2662,
+                        "id": 2653,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "1359:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2664,
+                      "id": 2655,
                       "indexExpression": {
-                        "id": 2663,
+                        "id": 2654,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2637,
+                        "referencedDeclaration": 2628,
                         "src": "1373:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -10685,7 +10685,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1359:24:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
@@ -10694,13 +10694,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2666,
+                  "id": 2657,
                   "nodeType": "ExpressionStatement",
                   "src": "1352:31:16"
                 },
                 {
                   "expression": {
-                    "id": 2668,
+                    "id": 2659,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10710,11 +10710,11 @@
                     "prefix": false,
                     "src": "1394:13:16",
                     "subExpression": {
-                      "id": 2667,
+                      "id": 2658,
                       "name": "orgNumCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2586,
+                      "referencedDeclaration": 2577,
                       "src": "1394:11:16",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -10726,22 +10726,22 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 2669,
+                  "id": 2660,
                   "nodeType": "ExpressionStatement",
                   "src": "1394:13:16"
                 }
               ]
             },
             "functionSelector": "b6cbb28f",
-            "id": 2671,
+            "id": 2662,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2640,
+                "id": 2631,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2639,
+                  "id": 2630,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 46,
@@ -10755,17 +10755,17 @@
             "nameLocation": "1096:18:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2638,
+              "id": 2629,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2637,
+                  "id": 2628,
                   "mutability": "mutable",
                   "name": "_tokenIds",
                   "nameLocation": "1123:9:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2671,
+                  "scope": 2662,
                   "src": "1115:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10774,7 +10774,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2636,
+                    "id": 2627,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1115:7:16",
@@ -10789,12 +10789,12 @@
               "src": "1114:19:16"
             },
             "returnParameters": {
-              "id": 2641,
+              "id": 2632,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1150:0:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "1087:328:16",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -10802,7 +10802,7 @@
           },
           {
             "body": {
-              "id": 2683,
+              "id": 2674,
               "nodeType": "Block",
               "src": "1495:61:16",
               "statements": [
@@ -10810,24 +10810,24 @@
                   "expression": {
                     "expression": {
                       "baseExpression": {
-                        "id": 2678,
+                        "id": 2669,
                         "name": "orgainzations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2584,
+                        "referencedDeclaration": 2575,
                         "src": "1513:13:16",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2563_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Organization_$2554_storage_$",
                           "typeString": "mapping(uint256 => struct OrganizationControl.Organization storage ref)"
                         }
                       },
-                      "id": 2680,
+                      "id": 2671,
                       "indexExpression": {
-                        "id": 2679,
+                        "id": 2670,
                         "name": "_tokenIds",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2673,
+                        "referencedDeclaration": 2664,
                         "src": "1527:9:16",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -10841,33 +10841,33 @@
                       "nodeType": "IndexAccess",
                       "src": "1513:24:16",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Organization_$2563_storage",
+                        "typeIdentifier": "t_struct$_Organization_$2554_storage",
                         "typeString": "struct OrganizationControl.Organization storage ref"
                       }
                     },
-                    "id": 2681,
+                    "id": 2672,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "orgAddress",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 2556,
+                    "referencedDeclaration": 2547,
                     "src": "1513:35:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 2677,
-                  "id": 2682,
+                  "functionReturnParameters": 2668,
+                  "id": 2673,
                   "nodeType": "Return",
                   "src": "1506:42:16"
                 }
               ]
             },
             "functionSelector": "5296598c",
-            "id": 2684,
+            "id": 2675,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -10875,17 +10875,17 @@
             "nameLocation": "1430:17:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2674,
+              "id": 2665,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2673,
+                  "id": 2664,
                   "mutability": "mutable",
                   "name": "_tokenIds",
                   "nameLocation": "1456:9:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2684,
+                  "scope": 2675,
                   "src": "1448:17:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10894,7 +10894,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2672,
+                    "id": 2663,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1448:7:16",
@@ -10909,17 +10909,17 @@
               "src": "1447:19:16"
             },
             "returnParameters": {
-              "id": 2677,
+              "id": 2668,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2676,
+                  "id": 2667,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2684,
+                  "scope": 2675,
                   "src": "1487:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -10928,7 +10928,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2675,
+                    "id": 2666,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1487:7:16",
@@ -10943,14 +10943,14 @@
               ],
               "src": "1486:9:16"
             },
-            "scope": 2685,
+            "scope": 2676,
             "src": "1421:135:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 2686,
+        "scope": 2677,
         "src": "116:1447:16",
         "usedErrors": []
       }
@@ -10963,7 +10963,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-09T07:43:56.424Z",
+  "updatedAt": "2021-08-11T04:12:46.694Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
