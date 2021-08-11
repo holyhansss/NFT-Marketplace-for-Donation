@@ -69,10 +69,11 @@ class App extends Component {
 
   handleView = async () => {
     let items = await this.state.NFTMarketContract.methods.fetchMarketItems().call({from: this.state.accounts[0]});
-    //this.setState({items})
-    const mapp = items.map((item) => {
-      console.log(item.tokenId , item.seller)
-    })
+    const mapp = items.map((item) => (
+      <li key={item.tokenId}>{item.tokenId}</li>
+    ))
+    return(<ul>{mapp}</ul>);
+
   } 
   
   render() {
@@ -90,8 +91,8 @@ class App extends Component {
             <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH'></input></p>
             <p><input type='submit'></input></p>
           </form>
-          <ReadNFTs NFTMarketContract={this.state.NFTMarketContract}></ReadNFTs>
           <button type='button' onClick={this.handleView}>View NFTs</button>
+          <ReadNFTs NFTMarketContract={this.state.NFTMarketContract} account={this.state.accounts[0]}></ReadNFTs>
         </div>
       </div>
     );
