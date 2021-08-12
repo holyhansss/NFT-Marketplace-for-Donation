@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.2.0"
+  },
+  "dependencies": {
+    "ipfs-http-client": "^52.0.0"
   }
 }
