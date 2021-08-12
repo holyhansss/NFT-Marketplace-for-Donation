@@ -35,9 +35,6 @@ class ReadNFTs extends Component {
     })).then(function(result) {
         that.setState({nfts: result, loaded: true})
     })
-
-    console.log(this.state.nfts)
-
   } 
   
   render() {
@@ -45,7 +42,6 @@ class ReadNFTs extends Component {
 
     else return (
     <div>
-        {console.log(this.state.nfts)}
         <div className="flex justify-center">
             <div className="px-4" style={{ maxWidth: '1600px' }}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">

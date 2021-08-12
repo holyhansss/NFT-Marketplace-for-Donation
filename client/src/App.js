@@ -15,7 +15,12 @@ import {
 class App extends Component {
   state = { mode: 'view', web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 1, items: []};
   
-  componentDidMount = async () => {
+  constructor(props) {
+    super(props)
+    this.initWbe3();
+  }
+
+  initWbe3 = async () => {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
@@ -48,7 +53,7 @@ class App extends Component {
       );
       console.error(error);
     }
-  };
+  }
   getContents = () =>{
     let _contents;
     if(this.state.mode === 'view'){
