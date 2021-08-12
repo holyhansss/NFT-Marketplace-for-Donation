@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { create } from 'ipfs-http-client';
-import "../App.css";
+
 import {
   nftaddress, nftmarketaddress
 } from '../config'
@@ -88,11 +88,9 @@ class CreateNFT extends Component {
                 <p><input type='text' name='assetName' placeholder='Asset Name' onChange={this.inputHandler}></input></p>
                 <p><textarea name='assetDesc' placeholder='Asset Description' onChange={this.inputHandler}></textarea></p>
                 <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH' onChange={this.inputHandler}></input></p>
-                <p><input type='submit'></input></p>
                 <p><input type='file' onChange={this.onFileChange}></input></p>
-                
+                <p><input type='submit'></input></p>    
             </form>
-            <button type='button' onClick={this.handleView}>View NFTs</button>
             </div>
         </div>
         );

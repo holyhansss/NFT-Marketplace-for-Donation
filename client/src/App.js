@@ -4,6 +4,7 @@ import NFT from "./contracts/NFT.json";
 import getWeb3 from "./getWeb3";
 import ReadNFTs from "./component/ReadNFTs";
 import CreateNFTs from "./component/CreateNFT";
+import Controller from "./component/Controller";
 
 import "./App.css";
 
@@ -48,8 +49,25 @@ class App extends Component {
       console.error(error);
     }
   };
-  
-
+  getContents = () =>{
+    let _contents;
+    if(this.state.mode === 'view'){
+      _contents = 
+      <ReadNFTs 
+        NFTContract={this.state.NFTContract} 
+        NFTMarketContract={this.state.NFTMarketContract} 
+        account={this.state.accounts[0]
+      }></ReadNFTs>
+    }else if(this.state.mode === 'create'){
+      _contents =  
+      <CreateNFTs 
+        NFTContract={this.state.NFTContract} 
+        NFTMarketContract={this.state.NFTMarketContract} 
+        account={this.state.accounts[0]}
+      ></CreateNFTs>
+    }
+    return _contents;
+  }
 
   render() {
     if (!this.state.web3) {
@@ -57,11 +75,14 @@ class App extends Component {
     }
 
     return (
-      
-      <div className="App">
-        <div className="container">
-          <CreateNFTs NFTContract={this.state.NFTContract} NFTMarketContract={this.state.NFTMarketContract} account={this.state.accounts[0]}></CreateNFTs>
-          <ReadNFTs NFTMarketContract={this.state.NFTMarketContract} account={this.state.accounts[0]}></ReadNFTs>
+      <div>
+        <div className="App-header-">
+          <Controller></Controller>
+        </div>
+        <div className="App">
+          <div className="container">
+            {this.getContents()}
+          </div>
         </div>
       </div>
     );
