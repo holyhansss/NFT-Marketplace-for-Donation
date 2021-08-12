@@ -4,23 +4,32 @@ class ReadNFTs extends Component {
   
   constructor(props){
     super(props)
-    this.state = {item: null, NFTMarketContract: this.props.NFTMarketContract, account: this.props.account};
-    
+    this.state = {items: [], NFTMarketContract: this.props.NFTMarketContract, account: this.props.account};
+    this.handleView()
   }
-
+  
   handleView = async () => {
     let items = await this.state.NFTMarketContract.methods.fetchMarketItems().call({from: this.state.account});
-    let mapp = items.map((item) => (
-      <li key={item.tokenId}>{item.tokenId}</li>
-    ))
-    return mapp
+    this.setState({items})
   } 
   
   render() {
+      
     return (
-       
-            <ul>{}</ul>
-            
+        
+    <div>
+          {
+            this.state.items.map((nft, i) => (
+              <div key={i} className="border shadow rounded-xl overflow-hidden">
+                <div className="p-4 bg-black">
+                    {console.log(nft)}
+                    <p >ItemId - {nft.itemId}</p>
+                    <p >Price - {nft.price} Wei</p>
+                </div>
+              </div>
+            ))
+          }
+    </div>
         
     );
   }
