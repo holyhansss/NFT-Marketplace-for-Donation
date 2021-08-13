@@ -7,7 +7,7 @@ class ReadNFTs extends Component {
     super(props)
     this.state = {
         loaded: false,
-        nfts: [ ], 
+        nfts: [], 
         NFTContract: this.props.NFTContract,
         NFTMarketContract: this.props.NFTMarketContract, 
         account: this.props.account

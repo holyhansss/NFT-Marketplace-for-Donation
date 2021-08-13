@@ -5,7 +5,7 @@ import {
   nftaddress, nftmarketaddress
 } from '../config'
 
-const client = create('https://ipfs.infura.io:5001')
+const client = create('https://ipfs.infura.io:5001') ///ip4/127.0.0.1/tcp/5001
 
 class CreateNFT extends Component {
     

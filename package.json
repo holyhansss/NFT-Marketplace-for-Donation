@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^5.1.0",
     "ipfs-http-client": "^52.0.0"
   }
 }

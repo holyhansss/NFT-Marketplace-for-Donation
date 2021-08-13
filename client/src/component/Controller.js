@@ -11,11 +11,16 @@ class Controller extends Component {
   render() {
       
     return (
-        
-    <div>
-
-    </div>
-        
+      <ul>
+        <li onClick={function(e){
+            e.preventDefault();
+            this.props.onChangeMode('create');
+        }.bind(this)}>Create</li>
+        <li onClick={function(e){
+            e.preventDefault();
+            this.props.onChangeMode('view');
+        }.bind(this)}>View</li>
+      </ul>
     );
   }
 }

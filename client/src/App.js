@@ -5,7 +5,7 @@ import getWeb3 from "./getWeb3";
 import ReadNFTs from "./component/ReadNFTs";
 import CreateNFTs from "./component/CreateNFT";
 import Controller from "./component/Controller";
-
+import Header from "./component/Header";
 import "./App.css";
 
 import {
@@ -13,7 +13,7 @@ import {
 } from './config'
 
 class App extends Component {
-  state = { mode: 'view', web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 1, items: []};
+  state = { mode: 'create', web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 1, items: []};
   
   constructor(props) {
     super(props)
@@ -73,6 +73,10 @@ class App extends Component {
     }
     return _contents;
   }
+  onChangeMode = (_mode) => {
+    this.setState({mode: _mode})
+    console.log(_mode)
+  }
 
   render() {
     if (!this.state.web3) {
@@ -81,8 +85,8 @@ class App extends Component {
 
     return (
       <div>
-        <div className="App-header-">
-          <Controller></Controller>
+        <div>
+          <Controller onChangeMode={(_mode) => this.onChangeMode(_mode)}></Controller>
         </div>
         <div className="App">
           <div className="container">
