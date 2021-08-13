@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { create } from 'ipfs-http-client';
+
+import {
+    nftaddress, nftmarketaddress
+  } from '../config'
+
+const client = create('https://ipfs.infura.io:5001') ///ip4/127.0.0.1/tcp/5001
 
 class ReadNFTs extends Component {
   
@@ -13,10 +20,10 @@ class ReadNFTs extends Component {
         account: this.props.account
     };
 
-    this.LoadNft()
+    this.loadNft()
   }
   
-  LoadNft = async () => {
+  loadNft = async () => {
     const that = this;
     let data = await this.state.NFTMarketContract.methods.fetchMarketItems().call({from: this.state.account});    
     const nfts = Promise.all(data.map( async i => {
@@ -36,7 +43,21 @@ class ReadNFTs extends Component {
         that.setState({nfts: result, loaded: true})
     })
   } 
-  
+// problem
+  buyNFT = async (nft) => {
+      let price = nft.price
+      console.log(price)
+      console.log(this.state.account)
+      try{
+        await this.state.NFTMarketContract.methods.createMarketSale(nftaddress, nft.tokenId)
+            .send({from: this.state.account, value: price})
+      }catch(error){
+          console.log('buy Failed')
+      }
+    
+        //.then(this.loadNft())
+        
+  }
   render() {
     if (this.state.loaded === false && !this.state.nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>)
 
@@ -57,7 +78,7 @@ class ReadNFTs extends Component {
                         </div>
                         <div className="p-4 bg-black">
                             <p className="text-2xl mb-4 font-bold text-white">{nft.price} ETH</p>
-                            <button className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded">Buy</button>
+                            <button className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => this.buyNFT(nft)}>Buy</button>
                         </div>
                     </div>
                     ))

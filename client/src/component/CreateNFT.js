@@ -53,12 +53,17 @@ class CreateNFT extends Component {
         let price = this.state.assetPrice;
         price = parseInt(price)
         try{
-            let transaction = await this.state.NFTContract.methods.createToken(url).send({from: this.state.account});
-            let id = await this.state.NFTContract.methods.createToken(url).call({from: this.state.account})
-            let listingPrice = await this.state.NFTMarketContract.methods.getListingPrice().call({from: this.state.account});
+            let transaction = await this.state.NFTContract.methods.createToken(url)
+                .send({from: this.state.account});
+            let id = await this.state.NFTContract.methods.createToken(url)
+                .call({from: this.state.account})
+            let listingPrice = await this.state.NFTMarketContract.methods.getListingPrice()
+                .call({from: this.state.account});
             listingPrice = listingPrice+""
             console.log(url)
-            let receipt = await this.state.NFTMarketContract.methods.createMarketItem(nftaddress, id-1, price).send( { from: this.state.account, value : listingPrice})
+            console.log(price)
+            await this.state.NFTMarketContract.methods.createMarketItem(nftaddress, id-1, price)
+                .send( { from: this.state.account, value : listingPrice})
             alert('Create Success')
         }catch(error){
             alert('Create Failed')
