@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { create } from 'ipfs-http-client';
 
-import {
-  nftaddress, nftmarketaddress
-} from '../config'
-
 const client = create('https://ipfs.infura.io:5001') ///ip4/127.0.0.1/tcp/5001
 
 class CreateNFT extends Component {
@@ -13,7 +9,9 @@ class CreateNFT extends Component {
     super(props)
     
     this.state = {
+        web3: this.props.web3,
         NFTContract: this.props.NFTContract, 
+        NFTContractAddress: this.props.NFTContractAddress,
         NFTMarketContract: this.props.NFTMarketContract, 
         account: this.props.account,
         selectedFile: null,
@@ -21,6 +19,7 @@ class CreateNFT extends Component {
         assetName:null,
         assetDesc:null,
         assetPrice:null,
+        sellCheckbox: false,
     };
 
   }
@@ -49,28 +48,22 @@ class CreateNFT extends Component {
     }
 
     createItem = async (url) => {
-
         let price = this.state.assetPrice;
-        price = parseInt(price)
+        price = this.state.web3.utils.toWei(price, 'ether')
+        console.log(price)
         try{
-            let transaction = await this.state.NFTContract.methods.createToken(url)
+            await this.state.NFTContract.methods.createToken(url)
                 .send({from: this.state.account});
             let id = await this.state.NFTContract.methods.createToken(url)
                 .call({from: this.state.account})
-            let listingPrice = await this.state.NFTMarketContract.methods.getListingPrice()
-                .call({from: this.state.account});
-            listingPrice = listingPrice+""
-            console.log(url)
-            console.log(price)
-            await this.state.NFTMarketContract.methods.createMarketItem(nftaddress, id-1, price)
-                .send( { from: this.state.account, value : listingPrice})
+            await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.sellCheckbox)
+                .send({ from: this.state.account})
             alert('Create Success')
         }catch(error){
             alert('Create Failed')
         }
         
     }
-
 
     onFileChange = async (e) => {
         e.preventDefault();
@@ -83,6 +76,10 @@ class CreateNFT extends Component {
             console.log('Error uploading file: ', error)
         }
     }
+    
+    sellCheckboxHandler = (e) => {
+        this.setState({sellCheckbox: e.target.checked})
+    }
 
     render() {
 
@@ -94,7 +91,8 @@ class CreateNFT extends Component {
                 <p><textarea name='assetDesc' placeholder='Asset Description' onChange={this.inputHandler}></textarea></p>
                 <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH' onChange={this.inputHandler}></input></p>
                 <p><input type='file' onChange={this.onFileChange}></input></p>
-                <p><input type='submit'></input></p>    
+                <label><input type="checkbox" name='sellCheckbox' checked={this.state.sellCheckbox} onChange={this.sellCheckboxHandler}/>Sell Immediately</label>
+                <p><input type='submit'></input></p>
             </form>
             </div>
         </div>

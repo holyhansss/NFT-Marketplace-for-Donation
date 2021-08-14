@@ -2,18 +2,25 @@ import React, { Component } from "react";
 import NFTMarket from "./contracts/NFTMarket.json";
 import NFT from "./contracts/NFT.json";
 import getWeb3 from "./getWeb3";
-import ReadNFTs from "./component/ReadNFTs";
+import ViewNFTMarket from "./component/ViewNFTMarket";
 import CreateNFTs from "./component/CreateNFT";
 import Controller from "./component/Controller";
-import Header from "./component/Header";
+//import Header from "./component/Header";
 import "./App.css";
-
-import {
-  nftaddress, nftmarketaddress
-} from './config'
+import MyNFTs from "./component/MyNFTs";
 
 class App extends Component {
-  state = { mode: 'create', web3: null, accounts: null, NFTContractAddress: '', NFTMarketContract: null, NFTContract: null, totalId: 1, items: []};
+  state = { 
+     mode: 'viewNFTMarket',
+     web3: null,
+     accounts: null, 
+     NFTContractAddress: '',
+     NFTMarketContractAddress: '', 
+     NFTMarketContract: null, 
+     NFTContract: null, 
+     totalId: 1, 
+     items: []
+    };
   
   constructor(props) {
     super(props)
@@ -29,8 +36,8 @@ class App extends Component {
       const accounts = await web3.eth.getAccounts();
 
       // Get the contract instance.
-      let networkId = await web3.eth.net.getId();
-      let deployedNetwork = NFTMarket.networks[networkId];
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = NFTMarket.networks[networkId];
       const NFTMarketContract = new web3.eth.Contract(
         NFTMarket.abi,
         deployedNetwork && deployedNetwork.address,
@@ -42,10 +49,15 @@ class App extends Component {
         NFT.abi,
         deployedNetwork2 && deployedNetwork2.address,
       );
-
       // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, NFTMarketContract, NFTContract});
+      this.setState(
+        { web3, 
+          accounts, 
+          NFTMarketContract, 
+          NFTContract, 
+          NFTContractAddress: deployedNetwork2.address, 
+          NFTMarketContractAddress: deployedNetwork.address
+        });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -56,20 +68,32 @@ class App extends Component {
   }
   getContents = () =>{
     let _contents;
-    if(this.state.mode === 'view'){
+    if(this.state.mode === 'viewNFTMarket'){
       _contents = 
-      <ReadNFTs 
+      <ViewNFTMarket 
+        web3 = {this.state.web3}
         NFTContract={this.state.NFTContract} 
-        NFTMarketContract={this.state.NFTMarketContract} 
+        NFTMarketContract={this.state.NFTMarketContract}
+        NFTContractAddress={this.state.NFTContractAddress}
         account={this.state.accounts[0]
-      }></ReadNFTs>
+      }></ViewNFTMarket>
     }else if(this.state.mode === 'create'){
       _contents =  
-      <CreateNFTs 
+      <CreateNFTs
+        web3 = {this.state.web3}
         NFTContract={this.state.NFTContract} 
         NFTMarketContract={this.state.NFTMarketContract} 
+        NFTContractAddress={this.state.NFTContractAddress}
         account={this.state.accounts[0]}
       ></CreateNFTs>
+    } else if(this.state.mode === 'viewMyItem'){
+      _contents = 
+      <MyNFTs 
+        NFTContract={this.state.NFTContract} 
+        NFTMarketContract={this.state.NFTMarketContract}
+        NFTContractAddress={this.state.NFTContractAddress}
+        account={this.state.accounts[0]
+      }></MyNFTs>
     }
     return _contents;
   }

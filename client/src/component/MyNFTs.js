@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { create } from 'ipfs-http-client';
 
-import {
-    nftaddress, nftmarketaddress
-  } from '../config'
-
-const client = create('https://ipfs.infura.io:5001') ///ip4/127.0.0.1/tcp/5001
-
-class ReadNFTs extends Component {
+class MyNFTs extends Component {
   
   constructor(props){
     super(props)
@@ -16,6 +9,7 @@ class ReadNFTs extends Component {
         loaded: false,
         nfts: [], 
         NFTContract: this.props.NFTContract,
+        NFTContractAddress: this.props.NFTContractAddress,
         NFTMarketContract: this.props.NFTMarketContract, 
         account: this.props.account
     };
@@ -25,8 +19,8 @@ class ReadNFTs extends Component {
   
   loadNft = async () => {
     const that = this;
-    let data = await this.state.NFTMarketContract.methods.fetchMarketItems().call({from: this.state.account});    
-    const nfts = Promise.all(data.map( async i => {
+    let data = await this.state.NFTMarketContract.methods.fetchMyNFTs().call({from: this.state.account});    
+    Promise.all(data.map( async i => {
         const TokenUri = await this.state.NFTContract.methods.tokenURI(i.tokenId).call({from: this.state.account})
         const meta = await axios.get(TokenUri)
         let nft = {
@@ -42,14 +36,15 @@ class ReadNFTs extends Component {
     })).then(function(result) {
         that.setState({nfts: result, loaded: true})
     })
+    
   } 
 // problem
   buyNFT = async (nft) => {
       let price = nft.price
       console.log(price)
-      console.log(this.state.account)
+      console.log(nft.tokenId)
       try{
-        await this.state.NFTMarketContract.methods.createMarketSale(nftaddress, nft.tokenId)
+        await this.state.NFTMarketContract.methods.createMarketSale(this.state.NFTContractAddress, nft.tokenId+1)
             .send({from: this.state.account, value: price})
       }catch(error){
           console.log('buy Failed')
@@ -59,7 +54,9 @@ class ReadNFTs extends Component {
         
   }
   render() {
-    if (this.state.loaded === false && !this.state.nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>)
+    if (this.state.nfts.length === 0) return (
+    
+    <h1 className="px-20 py-10 text-3xl">No items in marketplace or Loading...</h1>)
 
     else return (
     <div>
@@ -69,7 +66,7 @@ class ReadNFTs extends Component {
                 {
                     this.state.nfts.map((nft, i) => (
                     <div key={i} className="border shadow rounded-xl overflow-hidden">
-                        <img src={nft.image} width="300"/>
+                        <img alt={nft.name} src={nft.image} width="300"/>
                         <div className="p-4">
                             <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
                             <div style={{ height: '70px', overflow: 'hidden' }}>
@@ -92,4 +89,4 @@ class ReadNFTs extends Component {
   }
 }
 
-export default ReadNFTs;
+export default MyNFTs;

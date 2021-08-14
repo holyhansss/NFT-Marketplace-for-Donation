@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 
 class Controller extends Component {
-  
-  constructor(props){
-    super(props)
 
-  }
 
   
   render() {
@@ -18,8 +14,12 @@ class Controller extends Component {
         }.bind(this)}>Create</li>
         <li onClick={function(e){
             e.preventDefault();
-            this.props.onChangeMode('view');
-        }.bind(this)}>View</li>
+            this.props.onChangeMode('viewNFTMarket');
+        }.bind(this)}>NFT Market</li>
+        <li onClick={function(e){
+            e.preventDefault();
+            this.props.onChangeMode('viewMyItem');
+        }.bind(this)}>View My Item</li>
       </ul>
     );
   }
