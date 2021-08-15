@@ -56,7 +56,7 @@ class CreateNFT extends Component {
                 .send({from: this.state.account});
             let id = await this.state.NFTContract.methods.createToken(url)
                 .call({from: this.state.account})
-            await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.sellCheckbox)
+            await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price)
                 .send({ from: this.state.account})
             alert('Create Success')
         }catch(error){

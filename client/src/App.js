@@ -89,6 +89,7 @@ class App extends Component {
     } else if(this.state.mode === 'viewMyItem'){
       _contents = 
       <MyNFTs 
+        web3 = {this.state.web3}
         NFTContract={this.state.NFTContract} 
         NFTMarketContract={this.state.NFTMarketContract}
         NFTContractAddress={this.state.NFTContractAddress}

@@ -39,11 +39,8 @@ class ViewNFTMarket extends Component {
     })
     
   } 
-// problem
   buyNFT = async (nft) => {
       let price = nft.price
-      //price = parseInt(price)
-      //price = this.state.web3.utils.toWei(price, 'ether')
       console.log(price)
       console.log(nft.tokenId)
       try{
@@ -52,9 +49,7 @@ class ViewNFTMarket extends Component {
       }catch(error){
           console.log('buy Failed')
       }
-    
-        //.then(this.loadNft())
-        
+        //.then(this.loadNft())  
   }
   render() {
     if (this.state.nfts.length === 0) return (

@@ -6,6 +6,7 @@ class MyNFTs extends Component {
   constructor(props){
     super(props)
     this.state = {
+        web3: this.props.web3,
         loaded: false,
         nfts: [], 
         NFTContract: this.props.NFTContract,
@@ -37,22 +38,8 @@ class MyNFTs extends Component {
         that.setState({nfts: result, loaded: true})
     })
     
-  } 
-// problem
-  buyNFT = async (nft) => {
-      let price = nft.price
-      console.log(price)
-      console.log(nft.tokenId)
-      try{
-        await this.state.NFTMarketContract.methods.createMarketSale(this.state.NFTContractAddress, nft.tokenId+1)
-            .send({from: this.state.account, value: price})
-      }catch(error){
-          console.log('buy Failed')
-      }
-    
-        //.then(this.loadNft())
-        
   }
+
   render() {
     if (this.state.nfts.length === 0) return (
     
@@ -74,8 +61,7 @@ class MyNFTs extends Component {
                             </div>
                         </div>
                         <div className="p-4 bg-black">
-                            <p className="text-2xl mb-4 font-bold text-white">{nft.price} ETH</p>
-                            <button className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => this.buyNFT(nft)}>Buy</button>
+                            <p className="text-2xl mb-4 font-bold text-white">{this.state.web3.utils.fromWei(nft.price, 'ether')} ETH</p>
                         </div>
                     </div>
                     ))
