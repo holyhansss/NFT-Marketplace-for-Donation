@@ -59,9 +59,13 @@ contract NFTMarket is ReentrancyGuard, Ownable {
     );
     // add an Organization 
     function addOrganization(address _orgAddress, string memory _orgName) public onlyOwner{
+        //get orgId of current
         uint256 newTokenId = _OrgIds.current();
+        //set if to Organization
         idToOrgainzations[newTokenId] = Organization(newTokenId, _orgAddress, _orgName);
+        //emit newOrgCreated event
         emit newOrgCreated(newTokenId, _orgAddress, _orgName);
+        //increase orgId 
         _OrgIds.increment();
     }
     //delete an Organization

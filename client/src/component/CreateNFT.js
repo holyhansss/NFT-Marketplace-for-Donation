@@ -49,6 +49,8 @@ class CreateNFT extends Component {
 
     createItem = async (url) => {
         let price = this.state.assetPrice;
+        let ListingPirce = this.state.NFTMarketContract.methods.getListingPrice()
+            .call({from: this.state.account})
         price = this.state.web3.utils.toWei(price, 'ether')
         console.log(price)
         try{
@@ -56,8 +58,10 @@ class CreateNFT extends Component {
                 .send({from: this.state.account});
             let id = await this.state.NFTContract.methods.createToken(url)
                 .call({from: this.state.account})
+                console.log("this")
+
             await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price)
-                .send({ from: this.state.account})
+                .send({ from: this.state.account, value: ListingPirce})
             alert('Create Success')
         }catch(error){
             alert('Create Failed')
