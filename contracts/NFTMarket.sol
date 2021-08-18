@@ -75,6 +75,20 @@ contract NFTMarket is ReentrancyGuard, Ownable {
     function getOrgAddressById(uint256 _tokenId) public view returns(address){
         return idToOrgainzations[_tokenId].orgAddress;
     }
+    //fetch all organization
+    function fetchOrganization() public view returns(Organization[] memory){
+        uint totalNumOfOrg = _OrgIds.current();
+        uint currentIndex = 0;
+        Organization[] memory orgs = new Organization[](totalNumOfOrg);
+        
+        for(uint i=0; i<totalNumOfOrg; i++){
+            uint currentId = idToOrgainzations[i].id;
+            Organization storage currentOrg = idToOrgainzations [currentId];
+            orgs[currentIndex] = currentOrg;
+            currentIndex += 1;
+        }
+        return orgs;
+    }
 ////////////////////////////////////////////////////////////////////////////////////////////////
     /* Returns the listing price of the contract */
     function getListingPrice() public view returns (uint256) {
