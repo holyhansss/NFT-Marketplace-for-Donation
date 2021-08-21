@@ -58,7 +58,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         string _orgName
     );
     // add an Organization 
-    function addOrganization(address _orgAddress, string memory _orgName) public onlyOwner{
+    function addOrganization(address _orgAddress, string memory _orgName) public onlyOwner returns(uint256){
         //get orgId of current
         uint256 newTokenId = _OrgIds.current();
         //set if to Organization
@@ -67,6 +67,8 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         emit newOrgCreated(newTokenId, _orgAddress, _orgName);
         //increase orgId 
         _OrgIds.increment();
+        //return for front-end
+        return newTokenId;
     }
     //delete an Organization
     function deleteOrgainzation(uint256 _tokenId) public onlyOwner{
@@ -79,6 +81,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
     function getOrgAddressById(uint256 _tokenId) public view returns(address){
         return idToOrgainzations[_tokenId].orgAddress;
     }
+
     //fetch all organization
     function fetchOrganization() public view returns(Organization[] memory){
         uint totalNumOfOrg = _OrgIds.current();
@@ -110,7 +113,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         address _donateToWho   
     ) public payable nonReentrant {
         require(price > 0, "Price must be higher than 0 wei");
-        //require(msg.value == listingPrice,"Price mush be equal to list price");
+        require(msg.value == listingPrice,"Price mush be equal to list price");
         
         uint256 itemId = _itemIds.current();
         idToMarketItem[itemId] = MarketItem(
