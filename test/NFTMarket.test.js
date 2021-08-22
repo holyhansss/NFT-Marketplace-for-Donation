@@ -9,9 +9,15 @@ contract('NFT Market', async (accounts) => {
         const b = await market.getOrgAddressById(0)
         assert.equal(orgAddress, b);
     });
-    
-    it.only('create Donation Item', async () => {
-        
+
+    it.only('set new Listing price', async () => {
+        const market = await Market.deployed();
+        await market.setListingPrice(10000000000000000, {from: accounts[0]}); // 0.01 ether
+        let listingPrice = await market.getListingPrice();
+        assert.equal(listingPrice, 10000000000000000);
+    });
+
+    it('create Donation Item', async () => {
         const market = await Market.deployed();
         const nft = await NFT.deployed();
 
@@ -20,11 +26,13 @@ contract('NFT Market', async (accounts) => {
 
         await market.addOrganization(orgAddress, "Milal")
         let listingPrice = await market.getListingPrice();
-        listingPrice = listingPrice.toString();
-        listingPrice = web3.utils.fromWei(listingPrice, "ether")
-                
-
-        assert.equal(0.005, listingPrice);
+        listingPrice = listingPrice.toNumber();
+        //listingPrice = web3.utils.fromWei(listingPrice, "ether")
+        await nft.createToken("URL", {from: minter})
+        await nft.createToken("URL", {from: minter})
+        await market.createMarketItem(nft.address, 0, 1,orgAddress, {from: minter, value: listingPrice})
+        await market.createMarketItem(nft.address, 1, 1,orgAddress, {from: minter, value: listingPrice})
+        assert.equal(5000000000000000, listingPrice); // 0.005 ether
     });
 
 })

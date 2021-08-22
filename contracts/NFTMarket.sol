@@ -102,7 +102,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         return listingPrice;
     }
     // Setting New Listing Price around 1500 won
-    function setLIstingPrice(uint _newListingPrice) public onlyOwner {
+    function setListingPrice(uint _newListingPrice) public onlyOwner {
         listingPrice = _newListingPrice;
     }
     // Creating a new Donation Item
