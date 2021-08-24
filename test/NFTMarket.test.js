@@ -36,7 +36,16 @@ contract('NFT Market', async (accounts) => {
     });
 
     it('create market sale(sell nft!)', async () => {
-        
-    };
+        const market = await Market.deployed();
+        const nft = await NFT.deployed();
+
+        const orgAddress = accounts[0];
+        const minter = accounts[1];
+
+        let listingPrice = await market.getListingPrice();
+        listingPrice = listingPrice.toNumber();
+        await nft.createToken("URL", {from: minter})
+        /////// create market sale
+    });
 
 })
