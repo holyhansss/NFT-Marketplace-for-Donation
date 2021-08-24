@@ -75,7 +75,6 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         //require(idToOrgainzations[_tokenId],"This orgization does not exist");
         emit newOrgCreated(_tokenId, idToOrgainzations[_tokenId].orgAddress, idToOrgainzations[_tokenId].name);
         delete idToOrgainzations[_tokenId];
-        
     }
     //get Organization address by id
     function getOrgAddressById(uint256 _tokenId) public view returns(address){

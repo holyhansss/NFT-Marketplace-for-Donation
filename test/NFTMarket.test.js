@@ -10,9 +10,9 @@ contract('NFT Market', async (accounts) => {
         assert.equal(orgAddress, b);
     });
 
-    it.only('set new Listing price', async () => {
+    it('set new Listing price', async () => {
         const market = await Market.deployed();
-        await market.setListingPrice(10000000000000000, {from: accounts[0]}); // 0.01 ether
+        await market.setListingPrice("10000000000000000", {from: accounts[0]}); // 0.01 ether
         let listingPrice = await market.getListingPrice();
         assert.equal(listingPrice, 10000000000000000);
     });
@@ -34,5 +34,9 @@ contract('NFT Market', async (accounts) => {
         await market.createMarketItem(nft.address, 1, 1,orgAddress, {from: minter, value: listingPrice})
         assert.equal(5000000000000000, listingPrice); // 0.005 ether
     });
+
+    it('create market sale(sell nft!)', async () => {
+        
+    };
 
 })
