@@ -39,21 +39,28 @@ contract('NFT Market', async (accounts) => {
         const market = await Market.deployed();
         const nft = await NFT.deployed();
 
-        const orgAddress = accounts[0];
-        const minter = accounts[1];
-        const buyer = accounts[2];
+        const owner = accounts[0]; // deployer 
+        const orgAddress = accounts[1];
+        const minter = accounts[2];
+        const buyer = accounts[3];
 
         let listingPrice = await market.getListingPrice();
         listingPrice = listingPrice.toNumber();
         //create token and market item
         await nft.createToken("URL", {from: minter})
         await market.createMarketItem(nft.address, 0, "5000000000000000000", orgAddress, {from: minter, value: listingPrice})
+        let minterPriceBeforeCreateSale = await web3.eth.getBalance(minter);
         // create market sale
         await market.createMarketSale(nft.address, 0, {from: buyer, value: "5000000000000000000"});
-        const priceInWei = await web3.eth.getBalance(orgAddress)
-        console.log(await web3.utils.fromWei(priceInWei, "ether"))
-        //assert.equal(orgAddress.getbalance() == 0.3)
 
+        const orgPriceInWei = await web3.eth.getBalance(orgAddress)
+        const minterPriceInWei = await web3.eth.getBalance(minter)
+
+        assert.equal(Number(minterPriceBeforeCreateSale) + 500000000000000000, minterPriceInWei) // earn 10% of item price
+        assert.equal(orgPriceInWei, 104500000000000000000) // get 100 ethers when deployed, and 90% of price 
+        
+        //check owner
+        //assert.equal()
     });
 
 })
