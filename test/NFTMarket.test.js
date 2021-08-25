@@ -35,17 +35,25 @@ contract('NFT Market', async (accounts) => {
         assert.equal(5000000000000000, listingPrice); // 0.005 ether
     });
 
-    it('create market sale(sell nft!)', async () => {
+    it.only('create market sale(sell nft!)', async () => {
         const market = await Market.deployed();
         const nft = await NFT.deployed();
 
         const orgAddress = accounts[0];
         const minter = accounts[1];
+        const buyer = accounts[2];
 
         let listingPrice = await market.getListingPrice();
         listingPrice = listingPrice.toNumber();
+        //create token and market item
         await nft.createToken("URL", {from: minter})
-        /////// create market sale
+        await market.createMarketItem(nft.address, 0, "5000000000000000000", orgAddress, {from: minter, value: listingPrice})
+        // create market sale
+        await market.createMarketSale(nft.address, 0, {from: buyer, value: "5000000000000000000"});
+        const priceInWei = await web3.eth.getBalance(orgAddress)
+        console.log(await web3.utils.fromWei(priceInWei, "ether"))
+        //assert.equal(orgAddress.getbalance() == 0.3)
+
     });
 
 })
