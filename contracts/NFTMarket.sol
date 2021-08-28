@@ -22,6 +22,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         uint256 tokenId;
         address payable owner;
         uint256 price;
+        bool bid;
         bool sold;
         address payable donateTo;
     }
@@ -109,7 +110,8 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         address nftContract, 
         uint256 tokenId, 
         uint256 price,
-        address _donateToWho   
+        address _donateToWho,
+        bool _bid   
     ) public payable nonReentrant {
         require(price > 0, "Price must be higher than 0 wei");
         require(msg.value == listingPrice,"Price mush be equal to list price");
@@ -121,6 +123,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
             tokenId,
             payable(msg.sender),
             price,
+            _bid,
             false,
             payable(_donateToWho)
         );
@@ -149,6 +152,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         uint tokenId = idToMarketItem[_itemId].tokenId;
         //check Item price is equal to mag.value
         require(msg.value == price,"does not equal to price");
+        
         //calculate ethers to owner
         uint priceToOwner = (msg.value)/10 * 1;
         //calculate ethers to Org
@@ -164,10 +168,10 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         //payable(owner).transfer(listingPrice);
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
-    function placeBid() public returns (bool success)
-{
-    // ...
-}
+    function placeBid(uint256 _itemId) public returns (bool success){
+        require(idToMarketItem[_itemId].bid == true);
+        
+    }
 ////////////////////////////////////////////////////////////////////////////////////////////////
     //fetch marketItem for frontEnd
     function fetchMarketItems() public view returns (MarketItem[] memory){
@@ -177,7 +181,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         
         MarketItem[] memory items = new MarketItem[](unsoldItemCount);
         for(uint i=0;i<itemCount;i++){
-            if(idToMarketItem[i].owner == msg.sender && idToMarketItem[i].sold == false){
+            if(idToMarketItem[i].bid == false && idToMarketItem[i].sold == false){
                 uint currentId = idToMarketItem[i].itemId;
                 MarketItem storage currentItem = idToMarketItem [currentId];
                 items[currentIndex] = currentItem;
@@ -207,7 +211,9 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         }
         return items;
     }
-
+    function fetchBidItems() public view returns(MarketItem[] memory) {
+        
+    }
 
 
     
