@@ -191,6 +191,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         return items;
     }
 
+    //fetch NFTs that msg.sender owns
     function fetchMyNFTs() public view returns (MarketItem[] memory){
         uint totalItemCount = _itemIds.current();
         uint itemCount = 0;
