@@ -114,7 +114,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         bool _bid   
     ) public payable nonReentrant {
         require(price > 0, "Price must be higher than 0 wei");
-        require(msg.value == listingPrice,"Price mush be equal to list price");
+        require(msg.value == listingPrice,"Price must be equal to list price");
         
         uint256 itemId = _itemIds.current();
         idToMarketItem[itemId] = MarketItem(

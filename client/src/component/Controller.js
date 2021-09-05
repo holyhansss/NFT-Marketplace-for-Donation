@@ -17,7 +17,7 @@ class Controller extends Component {
         }.bind(this)}>View My Item</li>
         <li onClick={function(e){
             this.props.onChangeMode('createNewOrg');
-        }.bind(this)}>Create New Org</li>
+        }.bind(this)}>Create New Organization</li>
         
       </ul>
     );

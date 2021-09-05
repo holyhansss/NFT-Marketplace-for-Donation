@@ -8,6 +8,7 @@ import Controller from "./component/Controller";
 //import Header from "./component/Header";
 import "./App.css";
 import MyNFTs from "./component/MyNFTs";
+import CreateNewOrg from "./component/CreateNewOrg";
 
 class App extends Component {
   state = { 
@@ -93,14 +94,22 @@ class App extends Component {
         NFTContract={this.state.NFTContract} 
         NFTMarketContract={this.state.NFTMarketContract}
         NFTContractAddress={this.state.NFTContractAddress}
-        account={this.state.accounts[0]
-      }></MyNFTs>
+        account={this.state.accounts[0]}
+      ></MyNFTs>
+    } else if(this.state.mode === "createNewOrg"){
+      _contents = 
+      <CreateNewOrg
+        web3 = {this.state.web3}
+        NFTContract={this.state.NFTContract}
+        NFTMarketContract={this.state.NFTMarketContract}
+        NFTContractAddress={this.state.NFTContractAddress}
+        account={this.state.accounts[0]}
+        ></CreateNewOrg>
     }
     return _contents;
   }
   onChangeMode = (_mode) => {
     this.setState({mode: _mode})
-    console.log(_mode)
   }
 
   render() {
