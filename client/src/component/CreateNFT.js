@@ -95,6 +95,7 @@ class CreateNFT extends Component {
                 <p><textarea name='assetDesc' placeholder='Asset Description' onChange={this.inputHandler}></textarea></p>
                 <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH' onChange={this.inputHandler}></input></p>
                 <p><input type='file' onChange={this.onFileChange}></input></p>
+                <p><select name="orgs"></select></p>
                 <label><input type="checkbox" name='sellCheckbox' checked={this.state.sellCheckbox} onChange={this.sellCheckboxHandler}/>Sell Immediately</label>
                 <p><input type='submit'></input></p>
             </form>

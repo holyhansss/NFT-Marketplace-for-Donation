@@ -21,8 +21,14 @@ class CreateNewOrg extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
-    CreateOrg = async () => {
-        
+    CreateOrg = async (e) => {
+        const {OrganizationName, OrganizationAddress, account} = this.state
+        e.preventDefault();
+        try{
+            await this.state.NFTMarketContract.methods.addOrganization(OrganizationAddress, OrganizationName).send({from: account});
+        }catch{
+            alert("Create Organzation Failed")
+        }
     }
 
     render() {
