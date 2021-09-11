@@ -20,9 +20,16 @@ class CreateNFT extends Component {
         assetDesc:null,
         assetPrice:null,
         sellCheckbox: false,
+        orgs: [],
     };
 
   }
+  getOrgs = async (e) => {
+    let orgs = await this.state.NFTMarketContract.methods.fetchOrganization().call({from: this.state.account});
+    this.setState(orgs);
+    console.log(orgs);  
+  }
+
   inputHandler = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
@@ -89,15 +96,17 @@ class CreateNFT extends Component {
 
         return (
         <div className="App">
+
             <div className="container">
+                <p onClick={this.getOrgs}>getorg</p>
             <form onSubmit={this.CreateItemData}>
                 <p><input type='text' name='assetName' placeholder='Asset Name' onChange={this.inputHandler}></input></p>
                 <p><textarea name='assetDesc' placeholder='Asset Description' onChange={this.inputHandler}></textarea></p>
                 <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH' onChange={this.inputHandler}></input></p>
                 <p><input type='file' onChange={this.onFileChange}></input></p>
                 <p><select name="orgs"></select></p>
-                <label><input type="checkbox" name='sellCheckbox' checked={this.state.sellCheckbox} onChange={this.sellCheckboxHandler}/>Sell Immediately</label>
-                <p><input type='submit'></input></p>
+                {/*<label><input type="checkbox" name='sellCheckbox' checked={this.state.sellCheckbox} onChange={this.sellCheckboxHandler}/>Sell Immediately</label>
+                */}<p><input type='submit'></input></p>
             </form>
             </div>
         </div>
