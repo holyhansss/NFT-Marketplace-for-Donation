@@ -22,9 +22,9 @@ constructor(props){
         assetDesc:null,
         assetPrice:null,
         bidCheckbox: false,
-        orgs: [],
+        orgs: [], 
         orgNames: [
-            {value: 'AAA', label: 'AAAA'}
+            {value: '0x000', label: 'Organization are added'}
         ],
         
     };
@@ -39,15 +39,17 @@ getOrgs = async (e) => {
         orgNames.push({value: orgs[i].orgAddress, label: orgs[i].name})
     }
     this.setState({orgs: orgs, orgNames: orgNames})
-    console.log(orgs[0].orgAddress)
+    //console.log(orgs[0].orgAddress)
 }
 
 inputHandler = (e) => {
     this.setState({[e.target.name]: e.target.value})
 }
+
 orgSelectHandler = (e) => {
     this.setState({selectedOrg: e.value});
 }
+
 CreateItemData = async (e) => {
     e.preventDefault();
     const {assetName, assetDesc, assetPrice, url} = this.state
@@ -70,19 +72,20 @@ CreateItemData = async (e) => {
 
 createItem = async (url) => {
     let price = this.state.assetPrice;
-    let ListingPirce = this.state.NFTMarketContract.methods.getListingPrice()
+    let ListingPirce = await this.state.NFTMarketContract.methods.getListingPrice()
         .call({from: this.state.account})
+        
     price = this.state.web3.utils.toWei(price, 'ether')
-    console.log(price)
     try{
         await this.state.NFTContract.methods.createToken(url)
             .send({from: this.state.account});
+
         let id = await this.state.NFTContract.methods.createToken(url)
             .call({from: this.state.account})
-            console.log("this")
-
-        await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.selectedOrg, true)
+            
+        await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.selectedOrg, this.state.bidCheckbox)
             .send({ from: this.state.account, value: ListingPirce})
+
         alert('Create Success')
     }catch(error){
         alert('Create Failed')
