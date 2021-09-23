@@ -25,6 +25,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         bool bid;
         bool sold;
         address payable donateTo;
+        address payable heightBider;
     }
     // define Organization struct
     struct Organization{
@@ -36,6 +37,7 @@ contract NFTMarket is ReentrancyGuard, Ownable {
     // map item token id to Donation Item
     mapping(uint256 => MarketItem) private idToMarketItem;
     mapping(uint256 => Organization) private idToOrgainzations;
+    mapping(address => bool) private orgExist;
 
     //event when New Dontation Item is created
     event MarketItemCreated (
@@ -60,6 +62,8 @@ contract NFTMarket is ReentrancyGuard, Ownable {
     );
     // add an Organization 
     function addOrganization(address _orgAddress, string memory _orgName) public onlyOwner returns(uint256){
+        //check if org alreay exist
+        require(orgExist[_orgAddress] == false,"Organization is already exist");
         //get orgId of current
         uint256 newTokenId = _OrgIds.current();
         //set if to Organization
@@ -68,15 +72,19 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         emit newOrgCreated(newTokenId, _orgAddress, _orgName);
         //increase orgId 
         _OrgIds.increment();
+        //org exist now
+        orgExist[_orgAddress] = true;
         //return for front-end
         return newTokenId;
     }
+
     //delete an Organization
     function deleteOrgainzation(uint256 _tokenId) public onlyOwner{
         //require(idToOrgainzations[_tokenId],"This orgization does not exist");
         emit newOrgCreated(_tokenId, idToOrgainzations[_tokenId].orgAddress, idToOrgainzations[_tokenId].name);
         delete idToOrgainzations[_tokenId];
     }
+
     //get Organization address by id
     function getOrgAddressById(uint256 _tokenId) public view returns(address){
         return idToOrgainzations[_tokenId].orgAddress;
@@ -125,7 +133,8 @@ contract NFTMarket is ReentrancyGuard, Ownable {
             price,
             _bid,
             false,
-            payable(_donateToWho)
+            payable(_donateToWho),
+            payable(address(0))
         );
 
         IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
@@ -168,9 +177,11 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         //payable(owner).transfer(listingPrice);
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
-    function placeBid(uint256 _itemId) public returns (bool success){
-        require(idToMarketItem[_itemId].bid == true);
-        
+    function placeBid(uint256 _itemId) public payable {
+        require(idToMarketItem[_itemId].bid == true, "not on bid");
+        require(idToMarketItem[_itemId].price < msg.value);
+        idToMarketItem[_itemId].heightBider == msg.sender;
+        idToMarketItem[_itemId].price == msg.value;
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
     //fetch marketItem for frontEnd
