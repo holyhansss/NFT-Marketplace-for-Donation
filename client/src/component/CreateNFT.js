@@ -3,9 +3,14 @@ import { create } from 'ipfs-http-client';
 import Select from 'react-select';
 
 const client = create('https://ipfs.infura.io:5001') ///ip4/127.0.0.1/tcp/5001
-
+const auction_Time_Options  = [
+    {value: 3600, label: '1 day'},
+    {value: 10800, label: '3 day'},
+    {value: 604800, label: '1 week'},
+    {value: 2629743 , label: '1 month'},
+]
 class CreateNFT extends Component {
-
+    
 constructor(props){
     super(props)
 
@@ -22,9 +27,10 @@ constructor(props){
         assetDesc:null,
         assetPrice:null,
         bidCheckbox: false,
+        bidTime: 0,
         orgs: [], 
         orgNames: [
-            {value: '0x000', label: 'Organization are added'}
+            {value: '0x000', label: 'Organization need to be added'}
         ],
         
     };
@@ -47,7 +53,13 @@ inputHandler = (e) => {
 }
 
 orgSelectHandler = (e) => {
-    this.setState({selectedOrg: e.value});
+    this.setState({bidTime: e.value});
+    console.log(e)
+}
+
+bidTimeSelectHandler = (e) => {
+    this.setState({[e.name]: e.value});
+    console.log(e)
 }
 
 CreateItemData = async (e) => {
@@ -82,8 +94,8 @@ createItem = async (url) => {
 
         let id = await this.state.NFTContract.methods.createToken(url)
             .call({from: this.state.account})
-            
-        await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.selectedOrg, this.state.bidCheckbox)
+
+            await this.state.NFTMarketContract.methods.createMarketItem(this.state.NFTContractAddress, id-1, price, this.state.selectedOrg, this.state.bidCheckbox, this.state.bidTime)
             .send({ from: this.state.account, value: ListingPirce})
 
         alert('Create Success')
@@ -110,7 +122,7 @@ bidCheckboxHandler = (e) => {
 }
 
 render() {
-
+    
     return (
     <div className="App">
         <div className="container">
@@ -120,7 +132,14 @@ render() {
                 <p><input type='text' name='assetPrice' placeholder='Asset Price in ETH' onChange={this.inputHandler}></input></p>
                 <p><input type='file' onChange={this.onFileChange}></input></p>
                 <label><input type="checkbox" name='bidCheckbox' checked={this.state.bidCheckbox} onChange={this.bidCheckboxHandler}/>Bid</label>
-                <Select calssName='selectOrgs' options={this.state.orgNames} onChange={this.orgSelectHandler}></Select>
+                <div>
+                    {
+                        this.state.bidCheckbox === true
+                        ? <Select calssName='biddingTime' options={auction_Time_Options} onChange={this.orgSelectHandler}></Select>
+                        : null
+                    }
+                </div>
+                <Select calssName='selectOrgs' options={this.state.orgNames} onChange={this.bidTimeSelectHandler}></Select>
                 <p><input type='submit'></input></p>
             </form>
         </div>

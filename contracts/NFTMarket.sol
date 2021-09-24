@@ -141,9 +141,9 @@ contract NFTMarket is ReentrancyGuard, Ownable {
             block.timestamp,
             block.timestamp + _biddingTime
         );
-        if(_bid == true){
-            placeBid(itemId);
-        }
+        // if(_bid == true){
+        //     placeBid(itemId);
+        // }
         IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
         _itemIds.increment();
         payable(owner()).transfer(msg.value);
