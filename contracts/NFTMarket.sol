@@ -25,7 +25,9 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         bool bid;
         bool sold;
         address payable donateTo;
-        address payable heightBider;
+        address payable highestBider;
+        uint256 bidingStart;
+        uint256 bidingEnd;
     }
     // define Organization struct
     struct Organization{
@@ -119,7 +121,8 @@ contract NFTMarket is ReentrancyGuard, Ownable {
         uint256 tokenId, 
         uint256 price,
         address _donateToWho,
-        bool _bid   
+        bool _bid,
+        uint256 _biddingTime
     ) public payable nonReentrant {
         require(price > 0, "Price must be higher than 0 wei");
         require(msg.value == listingPrice,"Price must be equal to list price");
@@ -134,12 +137,17 @@ contract NFTMarket is ReentrancyGuard, Ownable {
             _bid,
             false,
             payable(_donateToWho),
-            payable(address(0))
+            payable(address(0)),
+            block.timestamp,
+            block.timestamp + _biddingTime
         );
-
+        if(_bid == true){
+            placeBid(itemId);
+        }
         IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
         _itemIds.increment();
         payable(owner()).transfer(msg.value);
+
         emit MarketItemCreated(
             itemId, 
             nftContract, 
@@ -179,8 +187,11 @@ contract NFTMarket is ReentrancyGuard, Ownable {
 ////////////////////////////////////////////////////////////////////////////////////////////////
     function placeBid(uint256 _itemId) public payable {
         require(idToMarketItem[_itemId].bid == true, "not on bid");
-        require(idToMarketItem[_itemId].price < msg.value);
-        idToMarketItem[_itemId].heightBider == msg.sender;
+        require(idToMarketItem[_itemId].price < msg.value, "Bidding price can not be less than or equal to highest price");
+        require(block.timestamp <= idToMarketItem[_itemId].bidingEnd, "bidding was over");
+        require(msg.sender != idToMarketItem[_itemId].owner);
+
+        idToMarketItem[_itemId].highestBider == msg.sender;
         idToMarketItem[_itemId].price == msg.value;
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
